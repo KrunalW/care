@@ -1,0 +1,151 @@
+@import './variable.scss';
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $color-white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    z-index: 1;
+}
+.navbar {
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+main, .main {
+    margin-top: 75px;
+    transition: all ease .4s;
+}
+.full-width{
+    margin-left: 30px;
+}
+
+.table {
+    th {
+        background: $color-primary;
+        color: $color-white;
+        padding: 11px 10px;
+    }
+    td{
+        padding: 15px 10px;
+        font-size: 14px;
+        border: none;
+        a{
+            text-decoration: none;
+            color: $color-primary;
+        }
+    }
+}
+.table-striped{
+    tbody{
+        tr:nth-of-type(odd){
+            td{
+                background-color: #F9EDF2;
+            }
+        }
+    }
+}
+
+.container-fluid{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.custom-tooltip{
+    --bs-tooltip-bg: #6A002C;
+}
+.carousel-caption{
+    h1{
+        font-size: 58px;
+        line-height: 1;
+    }
+    p{
+        font-size: 24px;
+    }
+}
+.view-container{
+    margin: 50px 0;
+    position: relative;
+    img{
+        width: 100%;
+    }
+    
+}
+.play{
+    &::after{
+        content: '';
+        background: url("../img/play_icon.png") no-repeat;
+        top: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 70px;
+        right: 0;
+        height: 70px;
+        margin: auto;
+        cursor: pointer;
+    }
+}
+.content-box{
+    margin:15px;
+    h1{
+        font-weight: 600;
+    }
+    h6{
+        text-transform: uppercase;
+        position: relative;
+        &::before{
+            content: '';
+            width: 80px;
+            height: 3px;
+            background-color: #212120;
+            position: absolute;
+            left: -95px;
+            top: 8px;
+        }
+    }
+}
+.what-we-do{
+    background-color: #FCEDC6;
+}
+.card-cover{
+    &::before{
+        content: '';
+        position: absolute;
+        background: rgb(0 0 0 / 60%);
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+    background-repeat: no-repeat;
+}
+.p-relative{
+    position: relative;
+    z-index: 1;
+}
+.btn-circle{
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    width: 40px;
+}
+.event-box{
+    background-color: #F2C94C;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+@media (min-width: 1024px) {
+    .content-box{
+        margin:50px 100px 50px 150px;
+        h1{
+            font-size: 38px;
+            font-weight: 600;
+        }
+    }
+}
+.row-mr [class|="col"]{margin-bottom: 15px;}
